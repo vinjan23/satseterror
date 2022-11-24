@@ -99,7 +99,7 @@ systemctl restart nginx
 
 
 
-Special Thank to @jambulmerah
+Special Thanks to @jambulmerah
 
 
 
