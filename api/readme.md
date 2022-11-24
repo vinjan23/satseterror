@@ -97,6 +97,8 @@ sudo certbot --nginx --no-redirect
 systemctl restart nginx
 ```
 
+delete domain : rm -f /etc/nginx/sites-enabled/{jepe*,default}
+
 
 
 Special Thanks to @jambulmerah
