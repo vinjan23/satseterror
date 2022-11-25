@@ -97,6 +97,11 @@ echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/deb
 sudo apt-get update && sudo apt-get install yarn -y
 ```
 
+6. Install SSL
+```
+certbot --nginx --redirect -d YOUR EXPLORER DOMAIN
+```
+
 6. Hosting
 ```
 cp -r $HOME/explorer/dist/* /usr/share/nginx/html
