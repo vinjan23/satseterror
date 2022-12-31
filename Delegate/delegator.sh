@@ -51,10 +51,20 @@ echo "============================================================"
 read DENOM
 echo export DENOM=${DENOM} >> $HOME/.bash_profile
 echo "============================================================"
-echo "Set the fees amount per transaction"
+echo "Set the gas amount per transaction"
 echo "============================================================"
-read FEES
-echo export FEES=${FEES} >> $HOME/.bash_profile
+read GAS
+echo export GAS=${GAS} >> $HOME/.bash_profile
+echo "============================================================"
+echo "Set the gas price amount per transaction"
+echo "============================================================"
+read GAS
+echo export GAS=${GAS} >> $HOME/.bash_profile
+echo "============================================================"
+echo "Set the gas adjustment amount per transaction"
+echo "============================================================"
+read GAS
+echo export GAS=${GAS} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your chain id, example - umee-1"
 echo "============================================================"
@@ -64,7 +74,7 @@ source $HOME/.bash_profile
 
 
 mkdir $HOME/autodelegate
-wget -O $HOME/autodelegate/start.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/autodelegator/start.sh
+wget -O $HOME/autodelegate/start.sh https://raw.githubusercontent.com/vinjan23/satseterror/main/Delegate/start.sh
 chmod +x $HOME/autodelegate/start.sh
 break
 ;;
