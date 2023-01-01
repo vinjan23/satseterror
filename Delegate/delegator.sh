@@ -43,7 +43,7 @@ echo export VAL_ADDR=${VAL_ADDR} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Enter the password of wallet for set the delegator address"
 echo "============================================================"
-DEL_ADDR=$($PROJECT keys show $WALLETNAME --bech acc -a)
+DEL_ADDR=$($PROJECT keys show $WALLETNAME -a)
 echo export DEL_ADDR=${DEL_ADDR} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup denom of token, example - uumee"
