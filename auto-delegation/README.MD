@@ -2,8 +2,8 @@ Auto Delegation
 
 ### Start
 ```
-git clone https://github.com/umitbeniz/auto-delegation-stargaze-mainnet.git
-cd auto-delegation-stargaze-mainnet
+git clone https://github.com/vinjan23/satseterror/auto-delegation.git
+cd auto-delegation
 chmod +x delegate.sh
 ```
 
