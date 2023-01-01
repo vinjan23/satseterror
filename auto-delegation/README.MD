@@ -2,9 +2,7 @@ Auto Delegation
 
 ### Start
 ```
-git clone https://github.com/vinjan23/satseterror/auto-delegation.git
-cd auto-delegation
-chmod +x delegate.sh
+wget -O delegate.sh https://raw.githubusercontent.com/vinjan23/satseterror/main/auto-delegation/delegate.sh && chmod +x delegate.sh && ./delegate.sh
 ```
 
 ### SetConfig
