@@ -64,17 +64,18 @@ echo "============================================================"
 echo "Set the gas price amount per transaction"
 echo "============================================================"
 read GAS
-echo export GAS=${GAS} >> $HOME/.bash_profile
+echo export GAS=${GAS_PRICE} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Set the gas adjustment amount per transaction"
 echo "============================================================"
 read GAS
-echo export GAS=${GAS} >> $HOME/.bash_profile
+echo export GAS=${GAS_AD} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your chain id, example - umee-1"
 echo "============================================================"
 read CHAIN_ID
 echo export CHAIN_ID=${CHAIN_ID} >> $HOME/.bash_profile
+echo "============================================================"
 source $HOME/.bash_profile
 
 
