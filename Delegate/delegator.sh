@@ -5,9 +5,14 @@ do
 
 # Logo
 
-echo "============================================================"
-curl -s https://raw.githubusercontent.com/StakeTake/script/main/logo.sh | bash
-echo "============================================================"
+echo -e "\033[0;35m"
+echo "   #           #  o  #        #          #       #        #        #    ";
+echo "    #         #   #  #  #     #          #      #  #      #  #     #    ";
+echo "     #       #    #  #   #    #          #     #    #     #   #    #    ";
+echo "      #     #     #  #     #  #          #    #  # # #    #     #  #    ";
+echo "       #   #      #  #      # #          #   #        #   #      # #    ";
+echo "         #        #  #        #   # # # #   #          #  #        #    ";
+echo -e "\e[0m"
 
 
 PS3='Select an action: '
@@ -21,7 +26,7 @@ select opt in "${options[@]}"
        
 "Setup parametrs for autodelegator")
 echo "============================================================"
-echo "Setup service of project, example - umeed"
+echo "Setup service of project, example - uheart"
 echo "============================================================"
 read PROJECT
 echo export PROJECT=${PROJECT} >> $HOME/.bash_profile
