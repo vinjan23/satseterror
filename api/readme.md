@@ -19,7 +19,23 @@ nano /etc/nginx/sites-enabled/<YOUR.API.SUBDOMAIN.SITE>.conf
 3. Copy Example and Edit
 
 ```
-N/A
+server {
+    server_name YOUR.API.SUBDOMAIN.SITE;
+    listen 80;
+    location / {
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Max-Age 3600;
+        add_header Access-Control-Expose-Headers Content-Length;
+
+	proxy_set_header   X-Real-IP        $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header   Host             $host;
+
+        proxy_pass http://YOUR_API_NODE_IP:1337;
+
+    }
+}
+
 ```
 
 4. Config RPC
@@ -29,7 +45,23 @@ nano /etc/nginx/sites-enabled/<YOUR.RPC.SUBDOMAIN.SITE>.conf
 
 5. Copy and Edit
 ```
-N/A
+server {
+    server_name YOUR.RPC.SUBDOMAIN.SITE;
+    listen 80;
+    location / {
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Max-Age 3600;
+        add_header Access-Control-Expose-Headers Content-Length;
+
+	proxy_set_header   X-Real-IP        $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header   Host             $host;
+
+        proxy_pass http://YOUR_RPC_NODE_IP:26657;
+
+    }
+}
+
 ```
 
 6. Check Config
