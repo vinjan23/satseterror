@@ -1,5 +1,0 @@
-## State Sync
-
-```
-wget -O statesync-gitopia.sh https://raw.githubusercontent.com/vinjan23/satseterror/main/statesync-gitopia.sh && chmod +x statesync-gitopia.sh && ./statesync-gitopia.sh
-```
