@@ -93,6 +93,12 @@ nginx -t
 sudo certbot --nginx --register-unsafely-without-email
 sudo certbot --nginx --no-redirect
 ```
+```
+certbot --nginx --redirect -d your api domain
+```
+```
+certbot --nginx --redirect -d your rpc domain
+```
 
 11. Restart
 ```
