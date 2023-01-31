@@ -91,7 +91,7 @@ nginx -t
 10. Install SSL 
 ```
 sudo certbot --nginx --register-unsafely-without-email
-sudo certbot --nginx --no-redirect
+sudo certbot --nginx --redirect
 ```
 ```
 certbot --nginx --redirect -d your api domain
