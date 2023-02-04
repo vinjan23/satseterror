@@ -83,6 +83,7 @@ nano /etc/nginx/sites-enabled/<DOMAIN_EXPLORER>.conf
 
 9. Test Config
 ```
+sudo pkill nginx
 nginx -t 
 ```
 ** Jika konfigurasinya benar seperti ini** nginx: the configuration file /etc/nginx/nginx.conf syntax is ok nginx: configuration file /etc/nginx/nginx.conf test is successful
