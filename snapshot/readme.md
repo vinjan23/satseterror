@@ -58,10 +58,9 @@ sudo snap install lz4
 sudo systemctl stop
 ```
 ```
-wget -O wget -O <file-download> <address-snapshot>/file-download --inet4-only
-```
-```
-lz4 -c -d planq-snapshot-20230128.tar.lz4 | tar -x -C $HOME/.planqd
+planqd tendermint unsafe-reset-all --home $HOME/.planqd --keep-addr-book
+curl -L https://snap.planq.jepe.biz.id/planq/planq-snapshot-20230131.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.planqd
+
 ```
 
 ```
