@@ -52,9 +52,7 @@ sudo systemctl start nginx
 
 ### Command
 ```
-sudo apt update 
-sudo apt install snapd -y 
-sudo snap install lz4 
+sudo apt install lz4 -y
 sudo systemctl stop planqd
 ```
 ```
@@ -64,7 +62,7 @@ curl -L https://snap.planq.jepe.biz.id/planq/planq-snapshot-20230131.tar.lz4 | l
 ```
 
 ```
-sudo systemctl start planqd
+sudo systemctl restart planqd
 journalctl -fu planqd -o cat
 ```
 
