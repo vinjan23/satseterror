@@ -55,7 +55,7 @@ sudo systemctl start nginx
 sudo apt update 
 sudo apt install snapd -y 
 sudo snap install lz4 
-sudo systemctl stop
+sudo systemctl stop planqd
 ```
 ```
 planqd tendermint unsafe-reset-all --home $HOME/.planqd --keep-addr-book
