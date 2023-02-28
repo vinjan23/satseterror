@@ -64,22 +64,6 @@ server {
 
 ```
 
-6. Check Config
-```
-cat /etc/nginx/sites-enabled/neutron-rpc*
-cat /etc/nginx/sites-enabled/neutron-api*
-cat /etc/nginx/sites-enabled/YourDomain*
-```
-
-7. Configuration
-```
-cp ~/explorer/ping.conf /etc/nginx/sites-enabled/<DOMAIN_EXPLORER>.conf
-```
-
-8. Edit config
-```
-nano /etc/nginx/sites-enabled/<DOMAIN_EXPLORER>.conf
-```
 
 9. Test Config
 ```
