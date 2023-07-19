@@ -11,7 +11,7 @@ git clone https://github.com/ping-pub/explorer
 nano ~/explorer/src/chains/mainnet/<CHAIN_NAME>.json
 ```
 
-
+`change your api with own api` `your rpc with own rpc`
 ```
 {
     "chain_name": "timpi-tesnet",
