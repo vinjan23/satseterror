@@ -45,7 +45,7 @@ nano /etc/nginx/sites-enabled/ping.conf
 server {
     listen       80;
     listen  [::]:80;
-    server_name  <GANTI_DOMAIN_EXPLORER>;
+    server_name  <YOUR_DOMAIN_EXPLORER>;
 
     #access_log  /var/log/nginx/host.access.log  main;
 
