@@ -14,19 +14,20 @@ nano ~/explorer/src/chains/mainnet/<CHAIN_NAME>.json
 
 ```
 {
-    "chain_name": "XXX",
+    "chain_name": "timpi-tesnet",
     "coingecko": "",
     "api": ["https://Your API"],
     "rpc": ["https://Your RPC"],
-    "sdk_version": "0.42.4",
-    "addr_prefix": "neutron",
-    "logo": "/logos/neutron.jpg",
+    "sdk_version": "0.45.6",
+    "coin_type": "118",
+    "addr_prefix": "timpitn",
+    "logo": "/logos/timpi.png",
     "assets": [{
-        "base": "untrn",
-        "symbol": "NTRN",
+        "base": "utimpiTN",
+        "symbol": "TIMPITN",
         "exponent": "6",
         "coingecko_id": "",
-        "logo": "/logos/neutron.jpg"
+        "logo": "/logos/timpi.png"
     }]
 }
 ```
@@ -108,7 +109,3 @@ cp -r $HOME/explorer/dist/* /usr/share/nginx/html
 sudo systemctl restart nginx
 ```
 
-
-
-Special Thanks to :
-> [jambulmerah](https://github.com/jambulmerah "jambulmerah")
