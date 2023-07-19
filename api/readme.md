@@ -78,38 +78,12 @@ nginx -t
 sudo certbot --nginx --register-unsafely-without-email
 sudo certbot --nginx --redirect
 ```
-```
-certbot --nginx --redirect -d your api domain
-```
-```
-certbot --nginx --redirect -d your rpc domain
-```
 
 11. Restart
 ```
 systemctl restart nginx
 ```
 
-delete domain : rm -f /etc/nginx/sites-enabled/{jepe*,default}
 
-
-
-Special Thanks to @jambulmerah
-```
-server {
-        root /var/www/html;
-        index index.html index.htm index.nginx-debian.html;
-        server_name snap.planq.jepe.biz.id; 
-
-	location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                # try_files $uri $uri/ =404;
-                root /var/www/snapshot/;
-                autoindex on;
-
-    }
-}
-```
 
 
