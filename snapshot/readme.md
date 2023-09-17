@@ -16,7 +16,7 @@ nano /etc/nginx/sites-enabled/<YOUR.RPC.SUBDOMAIN.SITE>.conf
 server {
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
-        server_name snapshot.planq.vinjan.xyz; 
+        server_name snapshot-2.vinjan.xyz; 
 
 	location / {
                 # First attempt to serve request as file, then
