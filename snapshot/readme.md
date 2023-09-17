@@ -16,7 +16,7 @@ nano /etc/nginx/sites-enabled/<YOUR.RPC.SUBDOMAIN.SITE>.conf
 server {
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
-        server_name snapshot-2.vinjan.xyz; 
+        server_name snapshot.3.vinjan.xyz; 
 
 	location / {
                 # First attempt to serve request as file, then
@@ -50,28 +50,22 @@ sudo certbot --nginx --redirect
 5. Make snapshot file
  ```
 sudo apt install lz4
-cd $HOME/.planqd
-sudo systemctl stop planqd
+cd $HOME/.entangled
+sudo systemctl stop entangled
 ```
 
 ```
-tar -cf - data | lz4 > /var/www/snapshot/planq/planq-snapshot-$(date +%Y%m%d).tar.lz4
+tar -cf - data | lz4 > /var/www/snapshot/entangle/entangle-snapshot-$(date +%Y%m%d).tar.lz4
 ```
 
 ### Command
 ```
 sudo apt install lz4 -y
-sudo systemctl stop planqd
-```
-```
-planqd tendermint unsafe-reset-all --home $HOME/.planqd --keep-addr-book
-curl -L https://snap.planq.jepe.biz.id/planq/planq-snapshot-20230131.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.planqd
-
-```
-
-```
-sudo systemctl restart planqd
-journalctl -fu planqd -o cat
+sudo systemctl stop entangled
+entangled tendermint unsafe-reset-all --home $HOME/.entangled --keep-addr-book
+curl -L https://snapshot.3.vinjan.xyz/entangle/entangle-snapshot-20230917.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.entangled
+sudo systemctl restart entangled
+journalctl -fu entangled -o cat
 ```
 
 
