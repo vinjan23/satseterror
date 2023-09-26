@@ -47,25 +47,31 @@ sudo certbot --nginx --redirect
 
 4. Masuk `snapshot` make folder `<chain>`
 
-5. Make snapshot file
+### Prune
+```
+cd cosmprund
+sudo systemctl stop mantrachaind
+./build/cosmprund prune ~/.mantrachain/data --cosmos-sdk=false
+```
+
+Make snapshot file
  ```
-sudo apt install lz4
-cd $HOME/.entangled
-sudo systemctl stop entangled
+cd $HOME/.mantrachain
+sudo systemctl stop mantrachaind
 ```
 
 ```
-tar -cf - data | lz4 > /var/www/snapshot/entangle/entangle-snapshot-$(date +%Y%m%d).tar.lz4
+tar -cf - data | lz4 > /var/www/snapshot/mantrachain/mantrachain-snapshot-$(date +%Y%m%d).tar.lz4
 ```
 
 ### Command
 ```
 sudo apt install lz4 -y
-sudo systemctl stop entangled
-entangled tendermint unsafe-reset-all --home $HOME/.entangled --keep-addr-book
-curl -L https://snapshot.3.vinjan.xyz/entangle/entangle-snapshot-20230917.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.entangled
-sudo systemctl restart entangled
-journalctl -fu entangled -o cat
+sudo systemctl stop mantrachaind
+mantrachaind tendermint unsafe-reset-all --home $HOME/.mantrachain --keep-addr-book
+curl -L https://snapshot.vinjan.xyz/mantrachain/mantrachain-snapshot-20230926.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.mantrachain
+sudo systemctl restart mantrachaind
+journalctl -fu mantrachaind -o cat
 ```
 
 
