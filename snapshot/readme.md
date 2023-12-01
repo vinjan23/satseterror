@@ -50,18 +50,17 @@ sudo certbot --nginx --redirect
 ### Prune
 ```
 cd cosmprund
-sudo systemctl stop mantrachaind
-./build/cosmprund prune ~/.mantrachain/data --cosmos-sdk=false
+sudo systemctl stop ###
+./build/cosmprund prune ~/.***/data --cosmos-sdk=false
 ```
 
 Make snapshot file
  ```
-cd $HOME/.mantrachain
-sudo systemctl stop mantrachaind
+cd $HOME/.***
 ```
 
 ```
-tar -cf - data | lz4 > /var/www/snapshot/mantrachain/mantrachain-snapshot-$(date +%Y%m%d).tar.lz4
+tar -cf - data | lz4 > /var/www/snapshot/***/***-snapshot-$(date +%Y%m%d).tar.lz4
 ```
 
 ### Command
