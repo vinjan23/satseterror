@@ -59,7 +59,7 @@ sudo certbot --nginx --redirect
  
 2. Masuk `var` make folder `www`
 
-3. Masuk `www` make folder `snapshot``snap`
+3. Masuk `www` make folder `snapshot` `snap`
 
 4. Masuk `snapshot` make folder `<chain>`
 
