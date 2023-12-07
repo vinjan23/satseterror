@@ -16,13 +16,29 @@ nano /etc/nginx/sites-enabled/<YOUR.RPC.SUBDOMAIN.SITE>.conf
 server {
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
-        server_name snapshot.3.vinjan.xyz; 
+        server_name snapshot.vinjan.xyz; 
 
 	location / {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
                 # try_files $uri $uri/ =404;
                 root /var/www/snapshot/;
+                autoindex on;
+
+    }
+}
+```
+```
+server {
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
+        server_name snap.vinjan.xyz; 
+
+	location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                # try_files $uri $uri/ =404;
+                root /var/www/snap/;
                 autoindex on;
 
     }
@@ -43,7 +59,7 @@ sudo certbot --nginx --redirect
  
 2. Masuk `var` make folder `www`
 
-3. Masuk `www` make folder `snapshot`
+3. Masuk `www` make folder `snapshot``snap`
 
 4. Masuk `snapshot` make folder `<chain>`
 
