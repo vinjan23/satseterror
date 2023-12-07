@@ -82,11 +82,11 @@ tar -cf - data | lz4 > /var/www/snapshot/***/***-snapshot-$(date +%Y%m%d).tar.lz
 ### Command
 ```
 sudo apt install lz4 -y
-sudo systemctl stop mantrachaind
-mantrachaind tendermint unsafe-reset-all --home $HOME/.mantrachain --keep-addr-book
-curl -L https://snapshot.vinjan.xyz/mantrachain/mantrachain-snapshot-20230926.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.mantrachain
-sudo systemctl restart mantrachaind
-journalctl -fu mantrachaind -o cat
+sudo systemctl stop ***
+*** tendermint unsafe-reset-all --home $HOME/.** --keep-addr-book
+curl -L https://snap.vinjan.xyz/cascadia/cascadia-snapshot-20231207.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.**
+sudo systemctl restart ***
+journalctl -fu *** -o cat
 ```
 
 
