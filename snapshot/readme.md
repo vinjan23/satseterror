@@ -76,7 +76,7 @@ cd $HOME/.***
 ```
 
 ```
-tar -cf - data | lz4 > /var/www/snapshot/***/***-snapshot-$(date +%Y%m%d).tar.lz4
+tar -cf - data | lz4 > /var/www/snap/***/***-snapshot-$(date +%Y%m%d).tar.lz4
 ```
 
 ### Command
